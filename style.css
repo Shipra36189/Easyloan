@@ -1,0 +1,186 @@
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.stats-section {
+  background-color: #4b6cb7;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.left-shape {
+  width: 20%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.right-content {
+  width: 100%;
+  background-color: #4b6cb7;
+}
+
+.right-content .count {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.loan-calculator-section {
+  /* background: linear-gradient(135deg, #4b6cb7, #182848); */
+  background: linear-gradient(to right, #182848, #4b6cb7); 
+}
+
+.loan-calculator-section h2 {
+  font-weight: 700;
+  /* color: #ffc107; */
+}
+
+#result p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+#loanChart {
+  max-height: 250px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  #loanChart {
+    max-width: 200px;
+  }
+}
+
+
+.how-to-loan {
+  background: linear-gradient(to right, #182848, #4b6cb7);
+  color: white;
+}
+
+.how-to-loan h2 {
+  font-size: 2rem;
+}
+
+.how-to-loan ul i {
+  font-size: 1.2rem;
+}
+
+
+.eligibility-section {
+  background: linear-gradient(to right, #182848, #4b6cb7); 
+}
+
+.eligibility-section h5 {
+  font-size: 1.1rem;
+}
+
+.eligibility-section i {
+  flex-shrink: 0;
+}
+
+.eligibility-box {
+  background: #4b6cb7; /* Watercolor light blue */
+  transition: transform 0.3s ease;
+}
+
+.eligibility-box:hover {
+  transform: translateY(-4px);
+}
+
+.shadow-custom {
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.15);
+}
+
+
+.testimonial-section {
+  background: url('images/loan4.jpg') no-repeat center center / cover;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-overlay {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.testimonial-section .container {
+  position: relative;
+  z-index: 3;
+}
+
+.testimonial-content img {
+  object-fit: cover;
+}
+
+.quote-icon {
+  font-family: serif;
+  font-weight: bold;
+  line-height: 0;
+  margin-bottom: 10px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  /* margin: 14px 10px; */
+  /* margin-top: 29px; */
+  margin-bottom: -3rem;
+  opacity: 0.8;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+.footer-sec{
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+}
+.bg-comp{
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.bg-compare{
+  background: linear-gradient(to right, #182848, #4b6cb7); 
+}
+
+.plan-card{
+  background: linear-gradient(to right, #182848, #4b6cb7); 
+
+}

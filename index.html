@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">EasysLoan.com</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="loan-plans.html">Loan Plans</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section with Background Image -->
+<section class="section text-white text-center text-md-start" style="background: url('./images/image.png') no-repeat right center; background-size: contain;">
+  <div class="container">
+    <div class="row align-items-center" style="min-height: 300px;">
+      <div class="col-md-6">
+        <h1 class="display-4 fw-bold">Welcome to <span style="color: #ffc107;">EasyLoan</span></h1>
+        <p class="lead mt-3 text-dark fw-bold">Join the most secure and stylish platform. Simple login. Smooth experience.<br><span class="">Your trusted partner for fast and easy loans.</span></p>
+        <!-- <p class="lead mt-3">Your trusted partner for fast and easy loans.</p> -->
+        <a href="loan-plans.html" class="btn btn-light mt-4">Explore Plans</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section d-flex">
+  <!-- Left Diagonal Design -->
+  <div class="left-shape d-none d-md-block"></div>
+
+  <!-- Right Content -->
+  <div class="container-fluid right-content py-5 px-4 px-md-5">
+    <h2 class="mb-5 text-center text-md-start text-white "><span class="display-4 mb-10 fw-semibold">The right decision,</span><br>
+    <span class="text-warning fw-semibold">at the right time.</span>
+</h2>
+    <div class="row text-white">
+      <div class="col-md-3 col-6 mb-4">
+        <h3 class="count" data-count="120000">0</h3>
+        <p class="fs-4 fw-medium">Loans Taken</p>
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <h3 class="count" data-count="38" data-type="plain">0</h3>
+        <p class="fs-4 fw-medium">Offices</p>
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <h3 class="count" data-count="15" data-type="plain">0</h3>
+        <p class="fs-4 fw-medium">Awards Won</p>
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <h3 class="count" data-count="100" data-type="percent">0</h3>
+        <p class="fs-4 fw-medium">Happy Clients</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Choose <span class="text-warning fw-semibold">EasyLoan?</span></h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card bg-card bg-approval text-white h-100 p-4 d-flex flex-column justify-content-center">
+          <div class="overlay p-3">
+            <i class="bi bi-clock-history fs-1 mb-3"></i>
+            <h5>Instant Approval</h5>
+            <p>Quick approval in minutes with minimal documentation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card bg-card bg-interest text-white h-100 p-4 d-flex flex-column justify-content-center">
+          <div class="overlay p-3">
+            <i class="bi bi-cash-coin fs-1 mb-3"></i>
+            <h5>Low Interest Rates</h5>
+            <p>Affordable EMIs designed to suit your budget.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card bg-card bg-online text-white h-100 p-4 d-flex flex-column justify-content-center">
+          <div class="overlay p-3">
+            <i class="bi bi-globe2 fs-1 mb-3"></i>
+            <h5>100% Online Process</h5>
+            <p>Apply and manage loans from your home anytime.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="loan-calculator-section py-5 text-white">
+  <div class="container">
+    <h2 class="text-center mb-4 text-warning">Check Your Loan EMI Instantly</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="card bg-dark bg-opacity-75 text-white shadow-lg p-4 border-0 rounded-4">
+          <form id="loanForm">
+            <div class="mb-3">
+              <label for="amount" class="form-label">Loan Amount (₹)</label>
+              <input type="number" class="form-control" id="amount" placeholder="e.g. 500000" required>
+            </div>
+            <div class="mb-3">
+              <label for="interest" class="form-label">Interest Rate (%)</label>
+              <input type="number" step="0.1" class="form-control" id="interest" placeholder="e.g. 7.5" required>
+            </div>
+            <div class="mb-3">
+              <label for="tenure" class="form-label">Loan Tenure</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="tenure" placeholder="e.g. 5" required>
+                <select class="form-select" id="tenureType">
+                  <option value="years">Years</option>
+                  <option value="months">Months</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-warning w-100 fw-semibold">Calculate EMI</button>
+          </form>
+
+          <div class="mt-4" id="result" style="display: none;">
+            <h5 class="text-success">Your EMI Details</h5>
+            <p><strong>Monthly EMI:</strong> ₹<span id="emi"></span></p>
+            <p><strong>Total Interest:</strong> ₹<span id="interestTotal"></span></p>
+            <p><strong>Total Payment:</strong> ₹<span id="totalPayment"></span></p>
+            <canvas id="loanChart" class="mt-4"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container text-center">
+    <h2 class="mb-5">How It Works</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4">
+          <i class="bi bi-pencil-square fs-1 mb-3"></i>
+          <h5>Step 1</h5>
+          <p>Fill out the online application form.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4">
+          <i class="bi bi-file-earmark-check fs-1 mb-3"></i>
+          <h5>Step 2</h5>
+          <p>Get your documents verified quickly.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4">
+          <i class="bi bi-bank fs-1 mb-3"></i>
+          <h5>Step 3</h5>
+          <p>Receive your loan amount directly in your bank.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-to-loan py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      
+      <!-- 📝 Left: Text Content -->
+      <div class="col-lg-6">
+        <h2 class="text-warning fw-bold mb-3">How to Get an Instant Loan</h2>
+        <p class="text-white fs-5 mb-4">
+          Getting a loan through <span class="text-warning fw-semibold">EasyLoan</span> is quick, secure, and completely digital. Just follow these 3 simple steps:
+        </p>
+        <ul class="list-unstyled text-white fs-5">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Fill out the online application form</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Upload your KYC and income documents</li>
+          <li><i class="bi bi-check-circle-fill text-warning me-2"></i> Get approval and receive your funds instantly</li>
+        </ul>
+      </div>
+
+      <!-- 🎥 Right: Video -->
+      <div class="col-lg-6">
+        <div class="ratio ratio-16x9 shadow-lg rounded-4 border border-2 border-warning">
+          <iframe
+            src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+            title="How to get instant loan"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+<div class="text-center mt-4">
+  <a href="assets/loan-guide.pdf" download class="btn btn-outline-warning fw-semibold px-4 py-2">
+    <i class="bi bi-file-earmark-arrow-down me-2"></i>Download Step-by-Step PDF
+  </a>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="eligibility-section py-5 text-white">
+  <div class="container">
+    <h2 class="text-center text-warning fw-bold mb-3">Loan Eligibility Criteria</h2>
+    <p class="text-center mb-5 fs-5">
+      Before applying for a loan with <span class="fw-bold text-warning">EasyLoan</span>, make sure you meet the following conditions:
+    </p>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+      <!-- Item -->
+      <div class="col">
+        <div class="eligibility-box shadow-custom d-flex align-items-start p-4 rounded-3 h-100">
+          <i class="bi bi-check-circle-fill text-warning fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="text-white mb-1">You are 18 or older</h5>
+            <p class="mb-0">The minimum age to use our service is 18.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="eligibility-box shadow-custom d-flex align-items-start  p-4 rounded-3 h-100">
+          <i class="bi bi-check-circle-fill text-warning fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="text-white mb-1">You are a Indian Resident</h5>
+            <p class="mb-0">You must currently reside in the India.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="eligibility-box shadow-custom d-flex align-items-start  p-4 rounded-3 h-100">
+          <i class="bi bi-check-circle-fill text-warning fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="text-white mb-1">You have a bank account</h5>
+            <p class="mb-0">An active Indian bank account is required for fund transfer.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="eligibility-box shadow-custom d-flex align-items-start p-4 rounded-3 h-100">
+          <i class="bi bi-check-circle-fill text-warning fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="text-white mb-1">You are honest and trustworthy</h5>
+            <p class="mb-0">We value respectful and responsible applicants.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="eligibility-box shadow-custom d-flex align-items-start p-4 rounded-3 h-100">
+          <i class="bi bi-check-circle-fill text-warning fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="text-white mb-1">You have a valid address</h5>
+            <p class="mb-0">Provide a residential address to receive funds and communication.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col">
+        <div class="eligibility-box shadow-custom d-flex align-items-start  p-4 rounded-3 h-100">
+          <i class="bi bi-check-circle-fill text-warning fs-3 me-3 mt-1"></i>
+          <div>
+            <h5 class="text-white mb-1">You have regular income</h5>
+            <p class="mb-0">Monthly income from a job or benefits is required.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section position-relative text-white py-5">
+  <div class="testimonial-overlay"></div>
+
+  <div class="container position-relative text-center">
+    <h2 class="text-warning fw-bold mb-5">What Our Customers Say</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-content mx-auto" style="max-width: 600px;">
+            <img src="./images/p-1.png" alt="Priya" class="rounded-circle mb-2 border border-3 border-warning" width="100" height="100">
+            <p class="fs-5"><span class="text-warning fs-1">"</span>EasyLoan made the loan process so quick and stress-free. I got approval within 10 minutes!<span class="text-warning fs-1">"</span></p>
+            <div class="text-warning mb-3">
+              ★ ★ ★ ★ ★
+            </div>
+            <footer class="blockquote-footer text-white-50 mt-2">Priya S. from London</footer>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-content mx-auto" style="max-width: 600px;">
+            <img src="./images/p-2.png" alt="James" class="rounded-circle mb-2 border border-3 border-warning" width="100" height="100">
+            <p class="fs-5"><span class="text-warning fs-1">"</span>I never thought taking a loan could be this simple. Great service and support!<span class="text-warning fs-1">"</span></p>
+            <div class="text-warning mb-3">
+              ★ ★ ★ ★ ☆
+            </div>
+            <footer class="blockquote-footer text-white-50 mt-2">James R. from Birmingham</footer>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-content mx-auto" style="max-width: 600px;">
+            <img src="./images/p-3.png" alt="Anjali" class="rounded-circle mb-2 border border-3 border-warning" width="100" height="100">
+            <p class="fs-5"><span class="text-warning fs-1">"</span>Thanks to EasyLoan, I got my loan instantly with minimal documents. Highly recommend!<span class="text-warning fs-1">"</span></p>
+            <div class="text-warning mb-3">
+              ★ ★ ★ ★ ★
+            </div>
+            <footer class="blockquote-footer text-white-50 mt-2">Anjali T. from Manchester</footer>
+          </div>
+        </div>
+
+      </div>
+
+ <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- Dots (Indicators) -->
+      <div class="carousel-indicators mt-8">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active bg-warning" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="bg-warning" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" class="bg-warning" aria-label="Slide 3"></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer-sec text-white pt-5 pb-3 position-relative">
+  <div class="container">
+    <div class="row gy-4 justify-content-between">
+
+      <!-- Branding & Description -->
+      <div class="col-md-4">
+        <h4 class="text-warning fw-bold">EasyLoan</h4>
+        <p class="text-white-50">
+          Your trusted partner for fast, secure, and hassle-free online loans. Experience a smooth loan process with instant approvals.
+        </p>
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" class="text-warning fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-warning fs-5"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-warning fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-warning fs-5"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2">
+        <h5 class="text-warning">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+          <li><a href="loan-plans.html" class="text-white-50 text-decoration-none">Loan Plans</a></li>
+          <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+          <li><a href="#eligibility" class="text-white-50 text-decoration-none">Eligibility</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <h5 class="text-warning">Contact Us</h5>
+        <p class="text-white-50 mb-1"><i class="bi bi-envelope-fill me-2"></i> support@easyloan.com</p>
+        <p class="text-white-50 mb-1"><i class="bi bi-telephone-fill me-2"></i> +91 98765 43210</p>
+        <p class="text-white-50"><i class="bi bi-geo-alt-fill me-2"></i> Mumbai, India</p>
+      </div>
+    </div>
+
+    <hr class="text-white-50 my-4">
+
+    <div class="text-center text-white-50">
+      &copy; 2025 <span class="text-warning">EasyLoan</span>. All rights reserved.
+    </div>
+  </div>
+
+</footer>
+
+<button id="scrollTopBtn" onclick="scrollToTop()" 
+  class="btn btn-warning position-fixed end-0 bottom-0 m-4 rounded-circle shadow" 
+  style="display: none; z-index: 999;">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll('.count');
+
+  counters.forEach(counter => {
+    counter.innerText = '0';
+    const target = +counter.getAttribute('data-count');
+    const type = counter.getAttribute('data-type');
+    const duration = 2000;
+    const increment = target / (duration / 16);
+
+    const updateCount = () => {
+      let value = +counter.innerText.replace(/\D/g, '');
+      if (value < target) {
+        value += Math.ceil(increment);
+        if (target >= 1000) {
+          counter.innerText = `${value.toLocaleString()}+`;
+        } else {
+          counter.innerText = type === "percent" ? `${value}%` : value;
+        }
+        requestAnimationFrame(updateCount);
+      } else {
+        if (target >= 1000) {
+          counter.innerText = `${target.toLocaleString()}+`;
+        } else {
+          counter.innerText = type === "percent" ? `${target}%` : target;
+        }
+      }
+    };
+
+    updateCount();
+  });
+});
+
+
+let chart;
+
+  document.getElementById('loanForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const principal = parseFloat(document.getElementById('amount').value);
+    const annualRate = parseFloat(document.getElementById('interest').value);
+    let tenure = parseInt(document.getElementById('tenure').value);
+    const tenureType = document.getElementById('tenureType').value;
+
+    if (tenureType === 'years') {
+      tenure = tenure * 12;
+    }
+
+    const monthlyRate = annualRate / 12 / 100;
+    const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, tenure)) /
+                (Math.pow(1 + monthlyRate, tenure) - 1);
+
+    const totalPayment = emi * tenure;
+    const totalInterest = totalPayment - principal;
+
+    document.getElementById('emi').textContent = emi.toFixed(2);
+    document.getElementById('interestTotal').textContent = totalInterest.toFixed(2);
+    document.getElementById('totalPayment').textContent = totalPayment.toFixed(2);
+    document.getElementById('result').style.display = 'block';
+
+    const ctx = document.getElementById('loanChart').getContext('2d');
+    if (chart) chart.destroy();
+
+    chart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Principal', 'Interest'],
+        datasets: [{
+          data: [principal, totalInterest],
+          backgroundColor: ['#0d6efd', '#ffc107']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+  });
+
+  // Show/hide scroll-to-top button
+  window.onscroll = function () {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Smooth scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
